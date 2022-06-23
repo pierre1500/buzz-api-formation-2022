@@ -5,3 +5,6 @@ controllers:
 homepage:
     path: /
     controller: App\Controller\DialogController::defaultAction
+troll_api_endpoint:
+    path: /api/troll
+    controller: App\Controller\DialogController::apiAction
