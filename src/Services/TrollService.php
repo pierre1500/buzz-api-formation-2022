@@ -14,20 +14,12 @@ class TrollService
             'You are a very bad troll.',
             'You are a bad troll.',
         ];
-        $this->trollNamed = [
-            '{{name}} is a troll.',
-            '{{name}} is a very bad troll.',
-            '{{name}} is a bad troll.',
-        ];
-    }
 
-    public function getRandomTroll(bool $isNamed = false): string
-    {
-        $trolls = $this->trollUnnamed;
-        if ($isNamed) {
-            $trolls = $this->trollNamed;
-        }
-        return $trolls[array_rand($trolls)];
+        $this->trollNamed = [
+            '{{NAME}} is a troll.',
+            '{{NAME}} is a very bad troll.',
+            '{{NAME}} is a bad troll.',
+        ];
     }
 
     public function getTroll(?string $nomDuBobby = null): string
@@ -39,5 +31,14 @@ class TrollService
         }
 
         return $trollMessage;
+    }
+
+    public function getRandomTroll(bool $isNamed = false): string
+    {
+        $trolls = $this->trollUnnamed;
+        if ($isNamed) {
+            $trolls = $this->trollNamed;
+        }
+        return $trolls[array_rand($trolls)];
     }
 }

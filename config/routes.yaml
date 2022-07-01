@@ -5,6 +5,12 @@ controllers:
 homepage:
     path: /
     controller: App\Controller\DialogController::defaultAction
+
+admin_new_article:
+    path: /admin/new-article
+    controller: App\Controller\AdminController::newArticle
+
+
 troll_api_endpoint:
     path: /api/troll
     controller: App\Controller\DialogController::apiAction
