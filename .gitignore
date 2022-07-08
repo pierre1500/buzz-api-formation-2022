@@ -10,3 +10,6 @@
 /.idea/
 /public/assets/uploads/
 ###< symfony/framework-bundle ###
+
+# Project exclude paths
+/node_modules/
