@@ -1,52 +1,9 @@
 {% extends 'base_steam.html.twig' %}
 
 {% block body %}
-    <nav>
-        <div>
-            <a href="page_achat.html.twig" class="d-block">
-                <img id="logo" src="../public/assets/uploads/logo.png" alt="Logo">
-            </a>
-            <img id="diamond" src="../public/assets/uploads/diam.png" alt="diamond"><br>
-            <img id="cadi" src="../public/assets/uploads/cadi.png" alt="cadi"><br>
-        </div>
-        <div>
-            <img id="download" src="../public/assets/uploads/telech.png" alt="download"><br>
-            <img id="param" src="../public/assets/uploads/param.png" alt="param"><br>
-            <img id="compte" src="../public/assets/uploads/compte.png" alt="compte">
-        </div>
-    </nav>
-
     <main>
         <div class="container">
-            <header>
-                <a href="page_achat.html.twig" class="d-block">
-                    <img src="../public/assets/uploads/steam.png" alt="steam" id="logo-header">
-                </a>
-                <input id="search-bar" placeholder="Search..." type="search">
-                <img id="friends" src="../public/assets/uploads/amis.png" alt="friends">
-                <div id="navigation-jeux">
-                    <ul id="ul-nav" class=" m-0 p-0">
-                        <li class="li-nav-m">
-                            <a href="page_form_steam.html.twig" class="text-white">Votre magasin</a>
-                        </li>
-                        <li class="li-nav-m">
-                            Nouveautés
-                        </li>
-                        <li class="li-nav-m">
-                            Catégories
-                        </li>
-                        <li class="li-nav-m">
-                            Boutique des points
-                        </li>
-                        <li class="li-nav-m">
-                            Actualités
-                        </li>
-                        <li class="li-nav-m">
-                            <a href="page_form_steam.html.twig" class="text-white">Créer un produit</a>
-                        </li>
-                    </ul>
-                </div>
-            </header>
+            {% include "includes/steam/top-menu.html.twig" %}
         </div>
 
         <div class="container-custom">
@@ -54,16 +11,16 @@
                 <div class="row">
                     <div class="col-12 col-md-8 position-relative mb-3">
                         <div class="hero-header-img-small position-relative">
-                            <img src="../public/assets/uploads/satisfactory.png" alt="satisfactory">
+                            <img src="/assets/uploads/satisfactory.png" alt="satisfactory">
                         </div>
                     </div>
 
                     <div class="col-12 col-md-4">
                         <div class="mb-3 hero-header-img-small">
-                            <img src="../public/assets/uploads/satisfactory.png" class="w-100" alt="satisfactory">
+                            <img src="/assets/uploads/satisfactory.png" class="w-100" alt="satisfactory">
                         </div>
                         <div class="mb-0 hero-header-img-small">
-                            <img src="../public/assets/uploads/satisfactory.png" alt="satisfactory">
+                            <img src="/assets/uploads/satisfactory.png" alt="satisfactory">
                         </div>
                     </div>
                 </div>
@@ -76,7 +33,7 @@
                     <div class="col">
                         <div class="card card-game">
                             <div class="card-img-top">
-                                <img src="../public/assets/uploads/fifa.png" class="w-100" alt="satisfactory">
+                                <img src="/assets/uploads/fifa.png" class="w-100" alt="satisfactory">
                             </div>
                         </div>
                     </div>
@@ -84,7 +41,7 @@
                     <div class="col">
                         <div class="card card-game">
                             <div class="card-img-top">
-                                <img src="../public/assets/uploads/petite-image.png" class="w-100" alt="satisfactory">
+                                <img src="/assets/uploads/petite-image.png" class="w-100" alt="satisfactory">
                             </div>
                         </div>
                     </div>
@@ -92,7 +49,7 @@
                     <div class="col">
                         <div class="card card-game">
                             <div class="card-img-top">
-                                <img src="../public/assets/uploads/fifa.png" class="w-100" alt="satisfactory">
+                                <img src="/assets/uploads/fifa.png" class="w-100" alt="satisfactory">
                             </div>
                         </div>
                     </div>
@@ -100,7 +57,7 @@
                     <div class="col">
                         <div class="card card-game">
                             <div class="card-img-top">
-                                <img src="../public/assets/uploads/petite-image.png" class="w-100" alt="satisfactory">
+                                <img src="/assets/uploads/petite-image.png" class="w-100" alt="satisfactory">
                             </div>
                         </div>
                     </div>
@@ -122,18 +79,18 @@
                         <div class="avis-text me-4">
                             <p class="m-0">Review 3,4K</p>
                             <div class="avis d-flex align-items-center">
-                                <img src="../public/assets/uploads/emojione_star.png" alt="star" class="star">
-                                <img src="../public/assets/uploads/emojione_star.png" alt="star" class="star">
-                                <img src="../public/assets/uploads/emojione_star.png" alt="star" class="star">
-                                <img src="../public/assets/uploads/emojione_star.png" alt="star" class="star">
-                                <img src="../public/assets/uploads/emojione_star.png" alt="star" class="star disabled">
+                                <img src="/assets/uploads/emojione_star.png" alt="star" class="star">
+                                <img src="/assets/uploads/emojione_star.png" alt="star" class="star">
+                                <img src="/assets/uploads/emojione_star.png" alt="star" class="star">
+                                <img src="/assets/uploads/emojione_star.png" alt="star" class="star">
+                                <img src="/assets/uploads/emojione_star.png" alt="star" class="star disabled">
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-9 mt-4">
                         <div class="d-flex justify-content-end">
-                            <a href="page_form_steam.html.twig" class="btn btn-warning btn-lg me-2">Ajouter au panier !</a>
-                            <a href="page_form_steam.html.twig" class="btn btn-primary btn-lg">Jeux similaires</a>
+                            <a href="{{ path('page_form_steam') }}" class="btn btn-warning btn-lg me-2">Ajouter au panier !</a>
+                            <a href="{{ path('page_form_steam') }}" class="btn btn-primary btn-lg">Jeux similaires</a>
                         </div>
                     </div>
                 </div>
@@ -142,15 +99,15 @@
                     <div class="col-12 col-md-5 mb-4">
                         <div class="bg-primary rounded">
                             <div class="caracteristique-line">
-                                <img src="../public/assets/uploads/amis.png">
+                                <img src="/assets/uploads/amis.png">
                                 Solo
                             </div>
                             <div class="caracteristique-line">
-                                <img src="../public/assets/uploads/amis.png">
+                                <img src="/assets/uploads/amis.png">
                                 Coop
                             </div>
                             <div class="caracteristique-line">
-                                <img src="../public/assets/uploads/amis.png">
+                                <img src="/assets/uploads/amis.png">
                                 Multijoueur platforme
                             </div>
 
@@ -164,7 +121,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-7 mb-4">
-                        <img src="../public/assets/uploads/satisfactory.png" class="w-100" alt="satisfactory">
+                        <img src="/assets/uploads/satisfactory.png" class="w-100" alt="satisfactory">
                     </div>
                 </div>
             </section>

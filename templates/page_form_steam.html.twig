@@ -1,52 +1,9 @@
 {% extends 'base_steam.html.twig' %}
 
 {% block body %}
-    <nav>
-        <div>
-            <a href="page_achat.html.twig" class="d-block">
-                <img id="logo" src="../public/assets/uploads/logo.png" alt="Logo">
-            </a>
-            <img id="diamond" src="../public/assets/uploads/diam.png" alt="diamond"><br>
-            <img id="cadi" src="../public/assets/uploads/cadi.png" alt="cadi"><br>
-        </div>
-        <div>
-            <img id="download" src="../public/assets/uploads/telech.png" alt="download"><br>
-            <img id="param" src="../public/assets/uploads/param.png" alt="param"><br>
-            <img id="compte" src="../public/assets/uploads/compte.png" alt="compte">
-        </div>
-    </nav>
-
     <main>
         <div class="container">
-            <header>
-                <a href="page_achat.html.twig" class="d-block">
-                    <img src="../public/assets/uploads/steam.png" alt="steam" id="logo-header">
-                </a>
-                <input id="search-bar" placeholder="Search..." type="search">
-                <img id="friends" src="../public/assets/uploads/amis.png" alt="friends">
-                <div id="navigation-jeux">
-                    <ul id="ul-nav" class=" m-0 p-0">
-                        <li class="li-nav-m">
-                            <a href="page_form_steam.html.twig" class="text-white">Votre magasin</a>
-                        </li>
-                        <li class="li-nav-m">
-                            Nouveautés
-                        </li>
-                        <li class="li-nav-m">
-                            Catégories
-                        </li>
-                        <li class="li-nav-m">
-                            Boutique des points
-                        </li>
-                        <li class="li-nav-m">
-                            Actualités
-                        </li>
-                        <li class="li-nav-m">
-                            <a href="form.html.twig" class="text-white">Créer un produit</a>
-                        </li>
-                    </ul>
-                </div>
-            </header>
+            {% include "includes/steam/top-menu.html.twig" %}
         </div>
 
         <div class="container-custom">

@@ -14,4 +14,21 @@ class SteamController extends AbstractController
             'controller_name' => 'SteamController',
         ]);
     }
+
+    public function product(): Response
+    {
+        return $this->render('page_achat.html.twig', [
+            'controller_name' => 'SteamController',
+        ]);
+    }
+
+    public function form(): Response
+    {
+        return $this->render('page_form_steam.html.twig', [
+            'controller_name' => 'SteamController',
+        ]);
+    }
+
+
+
 }
