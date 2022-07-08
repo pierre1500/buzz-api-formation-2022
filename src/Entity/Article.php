@@ -2,10 +2,12 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiProperty;
+use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\ArticleRepository;
 use Cocur\Slugify\Slugify;
 use Doctrine\ORM\Mapping as ORM;
-
+#[ApiResource]
 #[ORM\Entity(repositoryClass: ArticleRepository::class)]
 class Article
 {
@@ -21,6 +23,7 @@ class Article
     private $pubDate;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[ApiProperty(readable: true, writable: false)]
     private $slug;
 
     #[ORM\Column(type: 'text')]

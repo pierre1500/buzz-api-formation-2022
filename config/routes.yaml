@@ -10,7 +10,15 @@ admin_new_article:
     path: /admin/new-article
     controller: App\Controller\AdminController::newArticle
 
-
 troll_api_endpoint:
     path: /api/troll
     controller: App\Controller\DialogController::apiAction
+
+api_custom_upload_file:
+    path: /apic/new-image
+    controller: App\Controller\ImageUploadApiController::index
+    methods: POST
+
+page_produit_steam:
+    path: /steam
+    controller: App\Controller\SteamController::index
