@@ -38,6 +38,13 @@ class ArticleType extends AbstractType
                     'placeholder' => 'Description de l\'article',
                 ],
             ])
+            ->add('description', TextareaType::class, [
+                'label' => 'Description',
+                'required' => false,
+                'attr' => [
+                    'placeholder' => 'Description de l\'article',
+                ],
+            ])
             ->add('content', TextareaType::class, [
                 'label' => 'Contenu',
                 'required' => true,
