@@ -2,11 +2,14 @@
 
 namespace App\Entity;
 
+
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\CartItemRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\Index;
 
 #[ORM\Entity(repositoryClass: CartItemRepository::class)]
+#[Index(fields: ["game", "cart"], name: "cart_game_item_key")]
 #[ApiResource]
 class CartItem
 {

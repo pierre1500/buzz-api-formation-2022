@@ -4,7 +4,12 @@
             <img id="logo" src="/assets/images/logo.png" alt="Logo">
         </a>
         <img id="diamond" src="/assets/images/diam.png" alt="diamond"><br>
-       <a href="{{ path('page_index_steam') }}"> <img id="cadi" src="/assets/images/cadi.png" alt="cadi"></a><br>
+       <a class="position-relative" href="{{ path('page_index_steam') }}"> <img id="cadi" src="/assets/images/cadi.png" alt="cadi">
+       {% if cart is defined and cart is not null and cart.cartItems | length > 0 %}
+           <span style="text-decoration:none!important;position:absolute;top:-35px;right:-20px;"
+                 class="badge badge-success">{{ cart.cartItems|length }}</span>
+         {% endif %}
+       </a><br>
         {% if app.user is not null %}
         <a style="text-decoration: none!important;" href="{{  path("page_form_steam") }}">
             ➕

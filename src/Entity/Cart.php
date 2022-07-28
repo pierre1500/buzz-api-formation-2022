@@ -34,6 +34,9 @@ class Cart
     #[ORM\OneToMany(mappedBy: 'cart', targetEntity: CartItem::class)]
     private $cartItems;
 
+    #[ORM\Column(type: 'datetime', nullable: true)]
+    private $dateUpdate;
+
     /**
      * Constructor
      */
@@ -41,6 +44,7 @@ class Cart
     {
         $this->owner = $owner;
         $this->dateCreation = new \DateTime();
+        $this->dateUpdate = new \DateTime();
         $this->paid = false;
         $this->guid = Uuid::v4();
         $this->cartItems = new ArrayCollection();
@@ -125,6 +129,18 @@ class Cart
                 $cartItem->setCart(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getDateUpdate(): ?\DateTimeInterface
+    {
+        return $this->dateUpdate;
+    }
+
+    public function setDateUpdate(\DateTimeInterface $dateUpdate): self
+    {
+        $this->dateUpdate = $dateUpdate;
 
         return $this;
     }
