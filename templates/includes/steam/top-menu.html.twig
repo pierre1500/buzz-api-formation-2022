@@ -3,7 +3,15 @@
         <img src="/assets/images/steam.png" alt="steam" id="logo-header">
     </a>
     <input id="search-bar" placeholder="Search..." type="search">
-    <img id="friends" src="/assets/images/amis.png" alt="friends">
+    {% if app.user is not null %}
+    <a href="/my-account" class="d-block">
+            <img src="/assets/images/amis.png" alt="logout" id="logout-header">
+        </a>
+    {% else %}
+        <a href="{{ path('app_login') }}" class="d-block">
+            <img src="/assets/images/amis.png" alt="login" id="login-header">
+        </a>
+    {% endif %}
     <div id="navigation-jeux">
         <ul id="ul-nav" class=" m-0 p-0">
             <li class="li-nav-m">

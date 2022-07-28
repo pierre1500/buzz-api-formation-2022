@@ -1,9 +1,21 @@
 controllers:
     resource: ../src/Controller/
-    type: attribute
+    type: annotation
+
+kernel:
+    resource: ../src/Kernel.php
+    type: annotation
+
+app_logout:
+    path: /logout
+    #controller: App\Controller\LoginController::index
+
+app_login:
+    path: /login
+    controller: App\Controller\LoginController::index
 
 homepage:
-    path: /
+    path: /test
     controller: App\Controller\DialogController::defaultAction
 
 admin_new_article:
@@ -20,17 +32,15 @@ api_custom_upload_file:
     methods: POST
 
 page_index_steam:
-    path: /steam
+    path: /
     controller: App\Controller\SteamController::index
 
 page_produit_steam:
-    path: /steam/product/{slug}
+    path: /product/{slug}
     controller: App\Controller\SteamController::product
     requirements:
-        slug: '[a-zA-Z0-9-_\/]+'
+        slug: '[a-zA-Z0-9\-_\/]+'
 
 page_form_steam:
-    path: /steam/form
+    path: /form
     controller: App\Controller\SteamController::form
-
-
